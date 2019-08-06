@@ -12,7 +12,7 @@ The folder name is a member of the kotliner organization that participates in th
 | 005  | [ChoiJY](http://github.com/ChoiJY)             | 코린이   | 2019.08.05 |
 | 006  | [yoontae8](http://github.com/yoontae8)         | GT       | 2019.08.05 |
 | 007  | [WaiverSurf](http://github.com/WaiverSurf)     | WaiverSurf| 2019.08.05 |
-| 008  | [k220j](http://github.com/k220j)               | 코린이   | 2019.08.05 |
+| 008  | [k220j](http://github.com/k220j)               | 호덩스   | 2019.08.05 |
 | 009  | [zinc0214](http://github.com/zinc0214)         | 롱   | 2019.08.06 |
 | 010  | [msnodeve](https://github.com/msnodeve)    | 싸이클러 | 2019.08.06 |
 
