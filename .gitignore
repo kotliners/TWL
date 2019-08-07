@@ -27,6 +27,7 @@ HELP.md
 /.nb-gradle/
 
 #ETC
-/gradle/
-/.idea/
-/.gradle/
+/**/gradle/
+/**/.idea/
+/**/.gradle/
+/**/build/
