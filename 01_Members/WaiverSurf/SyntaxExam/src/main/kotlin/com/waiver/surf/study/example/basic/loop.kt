@@ -1,33 +1,4 @@
-package com.waiver.beginner.example.반복문
-
 import java.util.*
-
-
-fun mapLoop(){
-    val binaryReps = TreeMap<Char, String>()
-
-    for(c in 'A'..'F'){
-        val binary = Integer.toBinaryString(c.toInt())
-        binaryReps.put(c, binary)
-    }
-    for( (key, value) in binaryReps ){
-        println("$key = $value")
-    }
-}
-
-fun listLoop(){
-    val list = arrayListOf(1,2,3,4,5)
-
-    // 인덱스 생성후 동시 출력
-    for((idx,value) in list.withIndex()){
-        println("$idx: $value")
-    }
-
-    // 데이터만 출력
-    for(data in list){
-        println("$data")
-    }
-}
 
 fun main(args : Array<String>){
     for(i in 1..10){
@@ -53,5 +24,15 @@ fun main(args : Array<String>){
     // forEach With Index type3
     for(i in arrayOf(5,6).indices){
         println("$i : ${arrayOf(5,6)[i]}")
+    }
+
+    // Map Put And Print
+    val binaryReps = TreeMap<Char, String>()
+    for(c in 'A'..'F'){
+        val binary = Integer.toBinaryString(c.toInt())
+        binaryReps.put(c, binary)
+    }
+    for( (key, value) in binaryReps ){
+        println("$key = $value")
     }
 }
