@@ -19,3 +19,25 @@ kotlinc <소스파일 또는 디렉터리> -include-runtime -d <jar 이름>
 java -jar <jar이름>
 ```
 
+
+
+## 코틀린의 예외 처리
+
+```kotlin
+fun readNumber(reader: BufferedReader){
+  val number = try{
+    // 예외가 발생하지 않으면 이 값을 number에
+    Integer.parseInt(reader.readLine())
+  }catch(e : NumberFormatException){
+    // 예외가 발생하면 null 값을 number에
+    null
+  }
+}
+```
+
+```bash
+>>> val reader = BufferedReader(StringReader("not a number"))
+>>> readNumber(reader)
+null
+```
+
