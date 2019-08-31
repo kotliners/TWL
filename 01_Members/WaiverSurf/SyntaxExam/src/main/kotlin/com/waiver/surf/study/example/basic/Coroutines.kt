@@ -74,8 +74,29 @@ class coroutineAsync {
     }
 }
 
+
+class coroutineThread {
+    fun startExam(){
+        // 스레드 waiver open
+        newSingleThreadContext("waiver").use { waiver ->
+            // 스레드 surf open
+            newSingleThreadContext("surf").use { surf ->
+                // 열어둔 waiver thread로 루틴 동작시작
+                runBlocking(waiver) {
+                    println("threadId->${Thread.currentThread().id}:waiver -> ${coroutineContext[Job]}")
+                    // 잠시 펜딩하고 surf 스레드 루틴 동작시작
+                    withContext(surf) {
+                        println("threadId->${Thread.currentThread().id}:surf -> ${coroutineContext[Job]}")
+                    }
+                }
+            }// end of surf thread
+        }// end of waiver thread
+    }
+}
+
 fun main(args : Array<String>) : Unit{
-    CoroutinesEach().startExam()
-    coroutineYield().startExam()
-    coroutineAsync().startExam()
+//    CoroutinesEach().startExam()
+//    coroutineYield().startExam()
+//    coroutineAsync().startExam()
+    coroutineThread().startExam()
 }
